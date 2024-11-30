@@ -79,7 +79,7 @@ Key Takeaway
 Gradient Descent is the driving force behind many machine learning models, allowing them to learn and improve. Its flexibility and efficiency make it indispensable, but tuning parameters like the learning rate is key to success.
 
 What’s Next?
-Join me tomorrow for Day 11, where we’ll explore Regularization Techniques, crucial for preventing overfitting in machine learning models!
+Join me tomorrow for Day 11, where we’ll explore Stochastic Gradient Descent (SGD) – Optimization Made Scalable!
 
 Follow the hashtag #30DaysOfMLAlgorithms to stay updated and keep learning.
 
