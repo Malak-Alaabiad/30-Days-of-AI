@@ -1,0 +1,85 @@
+🚀 Day 5: Support Vector Machines (SVM) – Drawing the Optimal Boundary
+Welcome to Day 5 of #30DaysOfMLAlgorithms! Today, we’re diving into Support Vector Machines (SVM), a powerful and versatile algorithm for classification, regression, and outlier detection tasks.
+
+Key Concepts
+Support Vector Machines work by finding the optimal hyperplane that separates data points into different classes.
+
+Key Idea: Maximize the margin between data points of different classes.
+The margin is the distance between the hyperplane and the closest data points (called support vectors).
+Kernel Trick: SVMs can handle non-linear data by transforming it into higher dimensions using kernels (e.g., linear, polynomial, RBF).
+Works for both binary and multiclass classification tasks.
+
+Real-World Applications
+Healthcare: Classifying tumors as malignant or benign.
+Finance: Detecting fraudulent transactions.
+Text Classification: Spam detection and sentiment analysis.
+Image Recognition: Face detection and handwriting recognition.
+Bioinformatics: Identifying genes linked to specific diseases.
+
+Pros and Cons
+Pros:
+
+Effective in high-dimensional spaces.
+Works well with small datasets.
+Can handle non-linear relationships using kernels.
+Robust to overfitting with proper regularization.
+
+Cons:
+
+Computationally intensive for large datasets.
+Sensitive to hyperparameter tuning (e.g., kernel choice, regularization).
+Less interpretable compared to simpler models.
+
+Code Snippet
+Here’s an example of using SVM in Python with scikit-learn:
+
+# Import libraries  
+from sklearn.datasets import make_classification  
+from sklearn.svm import SVC  
+from sklearn.model_selection import train_test_split  
+from sklearn.metrics import accuracy_score, classification_report  
+
+# Generate synthetic data  
+X, y = make_classification(n_samples=500, n_features=2, n_classes=2, n_informative=2, random_state=42)  
+
+# Split data  
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  
+
+# Train SVM with RBF kernel  
+model = SVC(kernel='rbf', C=1, gamma=0.5)  
+model.fit(X_train, y_train)  
+
+# Predict and evaluate  
+y_pred = model.predict(X_test)  
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")  
+print(classification_report(y_test, y_pred))  
+
+# Visualize decision boundary  
+import matplotlib.pyplot as plt  
+import numpy as np  
+
+# Create grid for visualization  
+x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1  
+y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1  
+xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.01), np.arange(y_min, y_max, 0.01))  
+
+# Predict on grid  
+Z = model.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)  
+
+# Plot  
+plt.contourf(xx, yy, Z, alpha=0.8, cmap='coolwarm')  
+plt.scatter(X[:, 0], X[:, 1], c=y, edgecolors='k', cmap='coolwarm')  
+plt.xlabel('Feature 1')  
+plt.ylabel('Feature 2')  
+plt.title('SVM Decision Boundary')  
+plt.show()  
+
+Key Takeaway
+Support Vector Machines are highly effective for classification and regression tasks, especially when the data has a clear margin of separation. With proper tuning, they can excel in complex, non-linear problems using kernel transformations.
+
+What’s Next?
+Stay tuned for Day 6, where we’ll explore Naive Bayes, a probabilistic algorithm widely used for text classification and other applications!
+
+Follow the hashtag #30DaysOfMLAlgorithms to keep learning!
+
+#MachineLearning #SVM #SupportVectorMachines #AI #DataScience #LearningJourney
