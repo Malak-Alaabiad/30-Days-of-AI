@@ -24,53 +24,19 @@ This repository is structured to provide detailed insights into 30 machine learn
 
 ## Topics Covered
 
-### Supervised Learning Algorithms
-1. Linear Regression – Predicting continuous outcomes.
-2. Logistic Regression – Binary classification problems.
-3. Decision Trees – Simple yet powerful decision-making models.
-4. Random Forest – An ensemble of decision trees.
-5. Support Vector Machines (SVM) – For classification and regression.
-6. Naive Bayes – Probabilistic classification.
-7. K-Nearest Neighbors (KNN) – Instance-based learning.
-8. Gradient Boosting – Boosting weak learners for strong predictions.
-9. XGBoost – A highly efficient implementation of gradient boosting.
-10. AdaBoost – Adaptive boosting for classification.
-
-### Unsupervised Learning Algorithms
-11. K-Means Clustering – Partitioning data into clusters.
-12. Hierarchical Clustering – Building a tree of clusters.
-13. DBSCAN – Density-based clustering.
-14. Principal Component Analysis (PCA) – Dimensionality reduction.
-15. t-SNE – Visualizing high-dimensional data.
-16. Autoencoders – Neural networks for unsupervised learning.
-17. Gaussian Mixture Models (GMM) – Probabilistic clustering.
-
-### Semi-Supervised Learning
-18. Self-Training – Labeling unlabeled data iteratively.
-19. Co-Training – Using multiple views of the data.
-
-### Reinforcement Learning Algorithms
-20. Q-Learning – Learning a policy using Q-values.
-21. Deep Q-Learning – Combining Q-learning with deep learning.
-22. Policy Gradient Methods – Direct optimization of policies.
-23. Actor-Critic Methods – Combining policy and value-based approaches.
-
-### Ensemble Methods
-24. Bagging – Bootstrap aggregating for reducing variance.
-25. Stacking – Combining multiple models with meta-learners.
-
-### Specialized Algorithms
-26. Time Series Analysis with ARIMA – Forecasting time-dependent data.
-27. HMM (Hidden Markov Models) – Sequential data modeling.
-
-### Advanced Topics
-28. Transfer Learning – Using pre-trained models.
-29. Deep Learning for Classification – Using neural networks.
-30. Anomaly Detection – Identifying rare events using ML.
-
-### Additional Topics
-31. Stochastic Gradient Descent (SGD)
-32. Natural Language Processing (NLP) – Using ML for text classification, sentiment analysis, etc.
+1. Linear Regression
+2. Logistic Regression 
+3. Decision Trees
+4. Random Forest
+5. Support Vector Machines (SVM)
+6. Naive Bayes
+7. K-Nearest Neighbors (KNN)
+8. Gradient Boosting
+9. Principal Component Analysis (PCA)
+10. Gradient Descent
+11. Stochastic Gradient Descent (SGD) (Additional Topic)
+12. Regularization Techniques
+13. 
 
 
 ---
