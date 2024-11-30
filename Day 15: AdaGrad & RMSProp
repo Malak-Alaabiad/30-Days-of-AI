@@ -1,5 +1,5 @@
 🚀 Day 15: AdaGrad & RMSProp – Smarter Optimization with Adaptive Learning Rates
-Welcome to Day 13 of #31DaysOfMLAlgorithms! Today, we’ll dive into two powerful optimization algorithms: AdaGrad and RMSProp, which adapt learning rates dynamically to improve convergence during training.
+Welcome to Day 15 of #30DaysOfMLAlgorithms! Today, we’ll dive into two powerful optimization algorithms: AdaGrad and RMSProp, which adapt learning rates dynamically to improve convergence during training.
 
 Key Concepts
 Both AdaGrad and RMSProp build upon Gradient Descent by adapting the learning rate for each parameter during training.
