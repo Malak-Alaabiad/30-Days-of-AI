@@ -1,0 +1,91 @@
+🚀 Day 15: AdaGrad & RMSProp – Smarter Optimization with Adaptive Learning Rates
+Welcome to Day 13 of #31DaysOfMLAlgorithms! Today, we’ll dive into two powerful optimization algorithms: AdaGrad and RMSProp, which adapt learning rates dynamically to improve convergence during training.
+
+Key Concepts
+Both AdaGrad and RMSProp build upon Gradient Descent by adapting the learning rate for each parameter during training.
+
+AdaGrad (Adaptive Gradient Algorithm):
+Adjusts learning rates based on the historical gradients for each parameter.
+Parameters with large gradients get smaller learning rates, and those with small gradients get larger learning rates.
+
+​
+RMSProp (Root Mean Squared Propagation):
+Addresses AdaGrad’s limitation by introducing a decay factor to prevent the learning rate from shrinking too much.
+
+Key Difference: RMSProp ensures a balance between past and current gradients, making it suitable for non-convex functions like those in deep learning.
+
+Real-World Applications
+Neural Networks: Enhances convergence in deep learning tasks like image classification or NLP.
+Reinforcement Learning: Solves complex problems with high-dimensional state spaces.
+Training Sparse Models: AdaGrad is effective for sparse data (e.g., text or recommendation systems).
+Dynamic Optimization: RMSProp is used in dynamic and non-stationary optimization problems.
+
+Pros and Cons
+
+AdaGrad:
+Pros:
+
+Effective for sparse data.
+Automatically adjusts learning rates for each parameter.
+Cons:
+Learning rate decays too quickly, making it unsuitable for long training processes.
+
+
+RMSProp:
+Pros:
+Solves AdaGrad’s learning rate decay issue.
+Works well with non-convex problems and deep networks.
+
+Cons:
+Requires tuning of the decay rate.
+
+Code Snippet
+Here’s a Python implementation of AdaGrad and RMSProp using NumPy:
+
+import numpy as np  
+
+# Example Dataset  
+X = np.array([[1, 2], [2, 3], [3, 4]])  
+y = np.array([5, 7, 9])  
+
+# Hyperparameters  
+alpha = 0.01  # Learning rate  
+epochs = 1000  
+epsilon = 1e-8  
+
+# Initialize Parameters  
+theta = np.zeros(X.shape[1])  
+
+# AdaGrad Implementation  
+grad_squared_sum = np.zeros(X.shape[1])  
+for _ in range(epochs):  
+    for i in range(len(X)):  
+        error = np.dot(X[i], theta) - y[i]  
+        gradient = error * X[i]  
+        grad_squared_sum += gradient**2  
+        theta -= alpha / (np.sqrt(grad_squared_sum) + epsilon) * gradient  
+
+print(f"Parameters (AdaGrad): {theta}")  
+
+# RMSProp Implementation  
+theta = np.zeros(X.shape[1])  
+grad_squared_avg = np.zeros(X.shape[1])  
+beta = 0.9  # Decay rate  
+for _ in range(epochs):  
+    for i in range(len(X)):  
+        error = np.dot(X[i], theta) - y[i]  
+        gradient = error * X[i]  
+        grad_squared_avg = beta * grad_squared_avg + (1 - beta) * gradient**2  
+        theta -= alpha / (np.sqrt(grad_squared_avg) + epsilon) * gradient  
+
+print(f"Parameters (RMSProp): {theta}")  
+
+Key Takeaway
+AdaGrad and RMSProp are optimization algorithms designed to adapt learning rates during training. While AdaGrad works well with sparse data, RMSProp is preferred for dynamic and deep learning problems.
+
+What’s Next?
+Join me tomorrow for Day 16, where we’ll explore Adam Optimizer, a combination of RMSProp and Momentum!
+
+Follow the hashtag #31DaysOfMLAlgorithms to stay updated and continue learning.
+
+#MachineLearning #AdaGrad #RMSProp #Optimization #AI #DataScience #LearningJourney
