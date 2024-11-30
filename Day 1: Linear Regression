@@ -1,5 +1,6 @@
 🚀 Day 1: Linear Regression – Simplifying Predictions
-Welcome to Day 1 of #31DaysOfMLAlgorithms! Today, we’re starting with the foundation of supervised learning: Linear Regression.
+
+Welcome to Day 1 of #30DaysOfMLAlgorithms! Today, we’re starting with the foundation of supervised learning: Linear Regression.
 
 Key Concepts
 Linear regression is a statistical method used to model the relationship between a dependent variable (output) and one or more independent variables (inputs). The goal is to find the best-fitting line (or hyperplane in higher dimensions) that minimizes the error between predicted and actual values.
@@ -15,17 +16,21 @@ Predicting Sales: Estimating future sales based on marketing spend.
 Healthcare: Modeling patient outcomes based on diagnostic tests.
 Finance: Predicting stock prices or economic trends.
 Real Estate: Estimating house prices based on location, size, and other factors.
+
 Pros and Cons
+
 Pros:
 
 Simple to implement and interpret.
 Works well for small datasets with linear relationships.
 Computationally efficient.
+
 Cons:
 
 Assumes linear relationships, limiting its applicability.
 Sensitive to outliers.
 Can underperform with complex or non-linear data.
+
 Code Snippet
 Here’s a quick Python implementation using scikit-learn:
 
