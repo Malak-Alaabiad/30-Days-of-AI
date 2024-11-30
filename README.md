@@ -69,7 +69,8 @@ This repository is structured to provide detailed insights into 30 machine learn
 30. Anomaly Detection – Identifying rare events using ML.
 
 ### Additional Topics
-31. Natural Language Processing (NLP) – Using ML for text classification, sentiment analysis, etc.
+31. Stochastic Gradient Descent (SGD)
+32. Natural Language Processing (NLP) – Using ML for text classification, sentiment analysis, etc.
 
 
 ---
