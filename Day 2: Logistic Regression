@@ -1,0 +1,75 @@
+🚀 Day 2: Logistic Regression – Predicting Probabilities
+Welcome to Day 2 of #30DaysOfMLAlgorithms! Today, we’re exploring Logistic Regression, a widely used algorithm for classification problems.
+
+Key Concepts
+Unlike linear regression, Logistic Regression predicts the probability that an input belongs to a specific class. Instead of fitting a straight line, it uses the sigmoid function to model the relationship between inputs and outputs:
+
+Output Range: The sigmoid function ensures outputs lie between 0 and 1, representing probabilities.
+Thresholding: By default, probabilities above 0.5 classify as one class (e.g., "Yes"), and below 0.5 as another (e.g., "No").
+Works for binary and multiclass classification problems.
+Real-World Applications
+Healthcare: Diagnosing diseases (e.g., predicting if a patient has diabetes).
+Marketing: Predicting customer churn (will a customer leave or stay?).
+Finance: Fraud detection (is this transaction fraudulent or not?).
+Social Media: Classifying spam emails or comments.
+Pros and Cons
+Pros:
+
+Simple and easy to implement.
+Outputs probabilistic predictions, which are interpretable.
+Works well for linearly separable datasets.
+Cons:
+
+Assumes a linear relationship between the input features and the log-odds.
+Struggles with complex, non-linear relationships.
+Sensitive to outliers.
+Code Snippet
+Here’s a quick implementation of Logistic Regression using scikit-learn:
+
+# Import libraries  
+from sklearn.datasets import load_iris  
+from sklearn.linear_model import LogisticRegression  
+from sklearn.model_selection import train_test_split  
+from sklearn.metrics import accuracy_score, classification_report  
+
+# Load dataset (Iris)  
+data = load_iris()  
+X = data.data[:, :2]  # Using the first two features  
+y = (data.target != 0) * 1  # Binary classification (class 0 vs others)  
+
+# Split dataset  
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  
+
+# Train logistic regression model  
+model = LogisticRegression()  
+model.fit(X_train, y_train)  
+
+# Predict and evaluate  
+y_pred = model.predict(X_test)  
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")  
+print(classification_report(y_test, y_pred))  
+
+# Visualize decision boundary  
+import numpy as np  
+import matplotlib.pyplot as plt  
+
+x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1  
+y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1  
+xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1), np.arange(y_min, y_max, 0.1))  
+Z = model.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)  
+
+plt.contourf(xx, yy, Z, alpha=0.8)  
+plt.scatter(X[:, 0], X[:, 1], c=y, edgecolors='k', marker='o')  
+plt.xlabel('Feature 1')  
+plt.ylabel('Feature 2')  
+plt.title('Logistic Regression Decision Boundary')  
+plt.show()  
+Key Takeaway
+Logistic Regression is a powerful yet simple classification algorithm that serves as the backbone of many machine learning tasks. It’s highly effective for binary problems and interpretable outputs make it a go-to choice in various industries.
+
+What’s Next?
+Join me tomorrow for Day 3, where we’ll explore Decision Trees – a versatile algorithm that can handle both classification and regression tasks!
+
+Follow the hashtag #30DaysOfMLAlgorithms to keep learning!
+
+#MachineLearning #LogisticRegression #DataScience #AI #LearningJourney
