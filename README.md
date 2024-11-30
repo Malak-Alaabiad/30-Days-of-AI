@@ -24,26 +24,26 @@ This repository is structured to provide detailed insights into 30 machine learn
 
 ## Topics Covered
 
-1 . Linear Regression
-2 . Logistic Regression 
-3 . Decision Trees
-4 . Random Forest
-5 . Support Vector Machines (SVM)
-6 . Naive Bayes
-7 . K-Nearest Neighbors (KNN)
-8 . Gradient Boosting
-9 . Principal Component Analysis (PCA)
-10. Gradient Descent
-11. Stochastic Gradient Descent (SGD) (Additional Topic)
-12. Regularization Techniques
-13. Ensemble Methods
-14. Dimensionality Reduction Techniques
-15. AdaGrad & RMSProp 
-16. Adam Optimizer 
-17. Reinforcement Learning Techniques
-18. Gradient Boosting Algorithms
-19. Convolutional Neural Networks
-20. Recurrent Neural Networks
+#### 1 . Linear Regression
+#### 2 . Logistic Regression 
+#### 3 . Decision Trees
+#### 4 . Random Forest
+#### 5 . Support Vector Machines (SVM)
+#### 6 . Naive Bayes
+#### 7 . K-Nearest Neighbors (KNN)
+#### 8 . Gradient Boosting
+#### 9 . Principal Component Analysis (PCA)
+#### 10. Gradient Descent
+#### 11. Stochastic Gradient Descent (SGD) (Additional Topic)
+#### 12. Regularization Techniques
+#### 13. Ensemble Methods
+#### 14. Dimensionality Reduction Techniques
+#### 15. AdaGrad & RMSProp 
+#### 16. Adam Optimizer 
+#### 17. Reinforcement Learning Techniques
+#### 18. Gradient Boosting Algorithms
+#### 19. Convolutional Neural Networks
+#### 20. Recurrent Neural Networks
 
 ---
 
