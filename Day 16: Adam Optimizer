@@ -1,5 +1,5 @@
 🚀 Day 16: Adam Optimizer – The King of Optimization in Deep Learning
-Welcome to Day 15 of #31DaysOfMLAlgorithms! Today, we’ll explore the Adam Optimizer, a widely used optimization algorithm in deep learning that combines the strengths of Momentum and RMSProp for faster and more efficient training.
+Welcome to Day 16 of #30DaysOfMLAlgorithms! Today, we’ll explore the Adam Optimizer, a widely used optimization algorithm in deep learning that combines the strengths of Momentum and RMSProp for faster and more efficient training.
 
 Key Concepts
 Adam (Adaptive Moment Estimation) is an optimization algorithm that adapts learning rates for each parameter based on estimates of first moments (mean) and second moments (variance) of gradients.
@@ -71,6 +71,6 @@ Adam Optimizer is a game-changer in deep learning, offering robust performance a
 What’s Next?
 Stay tuned for Day 16, where we’ll explore Reinforcement Learning Techniques, uncovering the world of decision-making in dynamic environments.
 
-Follow the hashtag #31DaysOfMLAlgorithms for daily insights. Let’s keep learning together!
+Follow the hashtag #30DaysOfMLAlgorithms for daily insights. Let’s keep learning together!
 
 #MachineLearning #AdamOptimizer #DeepLearning #DataScience #AI #Optimization #LearningJourney
