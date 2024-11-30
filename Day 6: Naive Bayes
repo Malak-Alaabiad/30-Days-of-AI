@@ -1,0 +1,76 @@
+🚀 Day 6: Naive Bayes – Probabilities Made Simple
+Welcome to Day 6 of #30DaysOfMLAlgorithms! Today, we’re exploring Naive Bayes, a probabilistic algorithm that is simple yet surprisingly powerful for many applications, especially in text classification and spam filtering.
+
+Key Concepts
+Naive Bayes is based on Bayes’ Theorem, which calculates the probability of a class given the observed data.
+
+Types of Naive Bayes models:
+
+Gaussian Naive Bayes: Assumes continuous features follow a normal distribution.
+Multinomial Naive Bayes: Works with discrete data, like word counts.
+Bernoulli Naive Bayes: Assumes binary features (e.g., presence/absence of words).
+
+Real-World Applications
+Email Spam Detection: Identifying spam emails based on keywords.
+Sentiment Analysis: Classifying text as positive, negative, or neutral.
+Medical Diagnosis: Predicting diseases based on symptoms.
+Recommendation Systems: Recommending products based on user preferences.
+Fraud Detection: Identifying fraudulent activities.
+
+Pros and Cons
+Pros:
+
+Simple to understand and implement.
+Works well with small datasets.
+Efficient for high-dimensional data (e.g., text).
+Performs well in multi-class classification tasks.
+Cons:
+
+Assumes independence of features, which may not hold in real-world data.
+Struggles with continuous features unless assumptions are met.
+Sensitive to imbalanced datasets.
+
+Code Snippet
+Here’s how you can implement Naive Bayes in Python using scikit-learn:
+
+# Import libraries  
+from sklearn.datasets import fetch_20newsgroups  
+from sklearn.feature_extraction.text import CountVectorizer  
+from sklearn.naive_bayes import MultinomialNB  
+from sklearn.model_selection import train_test_split  
+from sklearn.metrics import accuracy_score, classification_report  
+
+# Load dataset  
+data = fetch_20newsgroups(subset='all', categories=['rec.sport.hockey', 'sci.med'], remove=('headers', 'footers', 'quotes'))  
+X, y = data.data, data.target  
+
+# Preprocess text data  
+vectorizer = CountVectorizer()  
+X = vectorizer.fit_transform(X)  
+
+# Split dataset  
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  
+
+# Train Naive Bayes  
+model = MultinomialNB()  
+model.fit(X_train, y_train)  
+
+# Predict and evaluate  
+y_pred = model.predict(X_test)  
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")  
+print(classification_report(y_test, y_pred))  
+
+# Predict new example  
+new_example = ["The team scored a fantastic goal!"]  
+new_example_transformed = vectorizer.transform(new_example)  
+print("Prediction:", model.predict(new_example_transformed))  
+
+Key Takeaway
+Naive Bayes is a fast and effective algorithm for probabilistic classification tasks, especially when working with text or high-dimensional data. Despite its simplicity, it often delivers surprisingly good results in real-world applications.
+
+What’s Next?
+Join me tomorrow for Day 7, where we’ll uncover the magic of K-Nearest Neighbors (KNN) – a simple yet powerful algorithm based on proximity!
+
+Follow the hashtag #30DaysOfMLAlgorithms to stay updated!
+
+#MachineLearning #NaiveBayes #AI #DataScience #TextClassification #LearningJourney
