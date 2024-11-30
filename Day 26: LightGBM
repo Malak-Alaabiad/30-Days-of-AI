@@ -1,6 +1,6 @@
 🚀 Day 26: LightGBM – Lightweight Gradient Boosting for High Performance
 
-Welcome to Day 28 of #30DaysofMLAlgorithms! Today’s focus is on LightGBM, a gradient boosting framework that’s fast, efficient, and highly effective for large datasets and complex machine learning tasks.
+Welcome to Day 26 of #30DaysofMLAlgorithms! Today’s focus is on LightGBM, a gradient boosting framework that’s fast, efficient, and highly effective for large datasets and complex machine learning tasks.
 
 Key Concepts
 LightGBM (Light Gradient Boosting Machine) is designed for speed and scalability. It builds decision tree ensembles using histogram-based algorithms for efficient training and low memory consumption.
