@@ -1,4 +1,5 @@
 🚀 Day 2: Logistic Regression – Predicting Probabilities
+
 Welcome to Day 2 of #30DaysOfMLAlgorithms! Today, we’re exploring Logistic Regression, a widely used algorithm for classification problems.
 
 Key Concepts
@@ -7,22 +8,27 @@ Unlike linear regression, Logistic Regression predicts the probability that an i
 Output Range: The sigmoid function ensures outputs lie between 0 and 1, representing probabilities.
 Thresholding: By default, probabilities above 0.5 classify as one class (e.g., "Yes"), and below 0.5 as another (e.g., "No").
 Works for binary and multiclass classification problems.
+
 Real-World Applications
 Healthcare: Diagnosing diseases (e.g., predicting if a patient has diabetes).
 Marketing: Predicting customer churn (will a customer leave or stay?).
 Finance: Fraud detection (is this transaction fraudulent or not?).
 Social Media: Classifying spam emails or comments.
+
 Pros and Cons
+
 Pros:
 
 Simple and easy to implement.
 Outputs probabilistic predictions, which are interpretable.
 Works well for linearly separable datasets.
+
 Cons:
 
 Assumes a linear relationship between the input features and the log-odds.
 Struggles with complex, non-linear relationships.
 Sensitive to outliers.
+
 Code Snippet
 Here’s a quick implementation of Logistic Regression using scikit-learn:
 
@@ -64,6 +70,7 @@ plt.xlabel('Feature 1')
 plt.ylabel('Feature 2')  
 plt.title('Logistic Regression Decision Boundary')  
 plt.show()  
+
 Key Takeaway
 Logistic Regression is a powerful yet simple classification algorithm that serves as the backbone of many machine learning tasks. It’s highly effective for binary problems and interpretable outputs make it a go-to choice in various industries.
 
