@@ -1,0 +1,96 @@
+🚀 Day 7: K-Nearest Neighbors (KNN) – Learning Through Proximity
+Welcome to Day 7 of #30DaysOfMLAlgorithms! Today, we’re diving into K-Nearest Neighbors (KNN), a simple yet highly intuitive algorithm based on the idea that similar things are near each other.
+
+Key Concepts
+K-Nearest Neighbors is a non-parametric and lazy learning algorithm that classifies or predicts outcomes based on the nearest data points in the feature space.
+
+How It Works:
+
+Distance Calculation: Measures the distance between the query point and all other points using metrics like Euclidean, Manhattan, or Cosine distance.
+Neighbor Selection: Identifies the top k nearest points to the query point.
+Decision Rule:
+For classification: Assigns the majority class among the neighbors.
+For regression: Takes the average of the neighbors' values.
+
+Key Parameter:
+k: The number of neighbors to consider. Choosing the right k is crucial for balancing bias and variance.
+
+Real-World Applications
+Recommendation Systems: Suggesting products similar to what a user has interacted with.
+Healthcare: Diagnosing diseases based on symptoms.
+Fraud Detection: Identifying anomalous transactions.
+Image Recognition: Classifying objects or handwriting.
+Marketing: Segmenting customers based on purchase behavior.
+
+Pros and Cons
+Pros:
+
+Simple to understand and implement.
+No training phase – learns directly from data.
+Flexible and works for both classification and regression.
+Effective with small datasets.
+Cons:
+
+Computationally expensive for large datasets (due to distance calculations).
+Sensitive to irrelevant features and noisy data.
+Struggles with imbalanced datasets.
+Requires careful selection of 
+𝑘
+k and distance metric.
+
+Code Snippet
+Here’s how you can implement KNN in Python using scikit-learn:
+
+# Import libraries  
+from sklearn.datasets import load_iris  
+from sklearn.model_selection import train_test_split  
+from sklearn.neighbors import KNeighborsClassifier  
+from sklearn.metrics import accuracy_score, classification_report  
+
+# Load dataset  
+data = load_iris()  
+X, y = data.data, data.target  
+
+# Split dataset  
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  
+
+# Train KNN  
+k = 3  # Number of neighbors  
+model = KNeighborsClassifier(n_neighbors=k)  
+model.fit(X_train, y_train)  
+
+# Predict and evaluate  
+y_pred = model.predict(X_test)  
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")  
+print(classification_report(y_test, y_pred))  
+
+# Visualize decision boundaries (for 2D data)  
+import numpy as np  
+import matplotlib.pyplot as plt  
+
+# For simplicity, use first two features for visualization  
+X_train_2D, X_test_2D = X_train[:, :2], X_test[:, :2]  
+model.fit(X_train_2D, y_train)  
+
+x_min, x_max = X_train_2D[:, 0].min() - 1, X_train_2D[:, 0].max() + 1  
+y_min, y_max = X_train_2D[:, 1].min() - 1, X_train_2D[:, 1].max() + 1  
+xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.01), np.arange(y_min, y_max, 0.01))  
+
+Z = model.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)  
+
+plt.contourf(xx, yy, Z, alpha=0.8, cmap='coolwarm')  
+plt.scatter(X_train_2D[:, 0], X_train_2D[:, 1], c=y_train, edgecolors='k', cmap='coolwarm')  
+plt.xlabel('Feature 1')  
+plt.ylabel('Feature 2')  
+plt.title(f'KNN Decision Boundary (k={k})')  
+plt.show()  
+
+Key Takeaway
+KNN is an excellent algorithm for problems where similarity plays a key role. Its simplicity makes it a great starting point, but efficient handling of large datasets and proper feature scaling are essential for success.
+
+What’s Next?
+Join me tomorrow for Day 8, where we’ll explore K-Means Clustering, a key algorithm for unsupervised learning and pattern discovery!
+
+Follow the hashtag #30DaysOfMLAlgorithms to keep learning and growing.
+
+#MachineLearning #KNN #AI #DataScience #LearningJourney
