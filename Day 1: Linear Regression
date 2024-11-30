@@ -11,6 +11,7 @@ Linear relationship between variables.
 Homoscedasticity (constant variance of errors).
 Independence of errors.
 Normal distribution of errors.
+
 Real-World Applications
 Predicting Sales: Estimating future sales based on marketing spend.
 Healthcare: Modeling patient outcomes based on diagnostic tests.
