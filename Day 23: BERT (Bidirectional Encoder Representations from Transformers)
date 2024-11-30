@@ -79,7 +79,7 @@ Key Takeaway
 BERT has dramatically improved NLP by enabling machines to understand text contextually, setting new records in various NLP tasks. Though it requires significant computational resources, its powerful capabilities have made it a cornerstone of modern NLP.
 
 What’s Next?
-Tomorrow, we’ll dive into Autoencoders, exploring how they’re used for dimensionality reduction and data compression.
+Tomorrow, we’re diving into Self-Training Models, an innovative approach in machine learning where a model iteratively improves by training itself with its own predictions.
 
 Stay tuned and follow the hashtag #30DaysofMLAlgorithms for more daily machine learning insights!
 
