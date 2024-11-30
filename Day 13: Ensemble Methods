@@ -1,5 +1,5 @@
 🚀 Day 13: Ensemble Methods – The Power of Combining Models
-Welcome to Day 14 of #31DaysOfMLAlgorithms! Today, we explore Ensemble Methods, an approach that combines multiple models to achieve better performance than any individual model.
+Welcome to Day 13 of #30DaysOfMLAlgorithms! Today, we explore Ensemble Methods, an approach that combines multiple models to achieve better performance than any individual model.
 
 Key Concepts
 Ensemble methods improve the robustness and accuracy of machine learning models by aggregating the predictions of several base models.
@@ -70,6 +70,6 @@ Ensemble methods are a cornerstone of modern machine learning, combining the bes
 What’s Next?
 Tomorrow, we’ll explore Dimensionality Reduction Techniques and learn how to handle high-dimensional datasets effectively.
 
-Follow the hashtag #31DaysOfMLAlgorithms to stay updated and join the learning journey.
+Follow the hashtag #30DaysOfMLAlgorithms to stay updated and join the learning journey.
 
 #MachineLearning #EnsembleMethods #DataScience #AI #RandomForests #AdaBoost #LearningJourney
