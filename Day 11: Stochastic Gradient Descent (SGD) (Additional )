@@ -81,7 +81,7 @@ Key Takeaway
 Stochastic Gradient Descent is a workhorse of modern machine learning, enabling fast and efficient optimization for large-scale problems. Though it introduces randomness, careful tuning can lead to powerful results.
 
 What’s Next?
-Join me tomorrow for Day 12, where we’ll explore AdaGrad and RMSProp, advanced optimization techniques that adapt learning rates dynamically!
+Join me tomorrow for Day 12, where we’ll explore Regularization Techniques, crucial for preventing overfitting in machine learning models!
 
 Follow the hashtag #30DaysOfMLAlgorithms to stay updated and continue learning.
 
